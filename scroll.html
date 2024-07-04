@@ -14,7 +14,7 @@
         top: 0;
         left: 0;
         right: 0;
-        background: purple;
+        background: rgb(17, 32, 39);
         text-align: center;
         transition: 0.5s;
         transform: translateY(-100%);
@@ -22,6 +22,17 @@
 
       .header--show {
         transform: translateY(0);
+      }
+      .header ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        min-height: 80px;
+      }
+      .header li a {
+        color: aliceblue;
+        text-decoration: none;
       }
     </style>
   </head>
@@ -32,7 +43,11 @@
         @scroll.window="window.pageYOffset > lastPosScroll ? (isUpScroll = false, lastPosScroll =  window.pageYOffset) : (isUpScroll = true, lastPosScroll =  window.pageYOffset)"
         x-bind:class="isUpScroll ? 'header--show' : ''"
       >
-        I am the header
+        <ul>
+          <li><a href="#">LINK</a></li>
+          <li><a href="#">LINK</a></li>
+          <li><a href="#">LINK</a></li>
+        </ul>
       </header>
       <!-- Ignore everything below -->
       <h1>
