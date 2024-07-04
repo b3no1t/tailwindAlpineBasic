@@ -9,16 +9,8 @@
       defer
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
     ></script>
-    <style>
-      .square {
-        width: 4rem;
-        height: 4rem;
-        background-color: greenyellow;
-      }
-      .color-red {
-        background-color: red;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
+
     <title>TAILWIND CSS / ALPINE JS</title>
   </head>
   <body>
@@ -33,7 +25,11 @@
             >
               Switch class
             </button>
-            <div class="square" x-bind:class="open ? 'color-red' : ''"></div>
+
+            <div
+              class="square"
+              x-bind:class="open ? 'entrance' : 'leave'"
+            ></div>
           </div>
         </section>
       </div>

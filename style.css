@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+      
+      .square {
+        width: 4rem;
+        height: 4rem;
+        background-color: greenyellow;
+      }
+      .entrance {
+        @apply translate-x-0;
+      }
+      .leave {
+        @apply -translate-x-4;
+      }
