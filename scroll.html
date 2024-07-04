@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <title>ALPINE JS</title>
+    <style>
+      .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: purple;
+        text-align: center;
+        transition: 0.5s;
+        transform: translateY(-100%);
+      }
+
+      .header--show {
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body>
+    <div x-data="{ isUpScroll: true, lastPosScroll: 0 }">
+      <header
+        class="header"
+        @scroll.window="window.pageYOffset > lastPosScroll ? (isUpScroll = false, lastPosScroll =  window.pageYOffset) : (isUpScroll = true, lastPosScroll =  window.pageYOffset)"
+        x-bind:class="isUpScroll ? 'header--show' : ''"
+      >
+        I am the header
+      </header>
+      <!-- Ignore everything below -->
+      <h1>
+        Shows the header if the scroll goes up and hides it if the scroll goes
+        down.
+      </h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, dolore
+        temporibus ut eos eveniet vitae quo quasi illum, eligendi odio
+        laboriosam ducimus, perferendis nostrum! Dolor molestias tempore sequi
+        blanditiis ipsa.
+      </p>
+      <p>
+        Nobis suscipit officia reprehenderit laboriosam! Esse aut nobis aperiam
+        nam corrupti repudiandae velit eum, perferendis consequatur vero odio
+        neque eligendi voluptatum sapiente suscipit itaque maiores molestiae
+        dolores earum blanditiis dolore.
+      </p>
+      <p>
+        Qui consequatur aliquid doloremque iure voluptatibus fugit quibusdam
+        nesciunt, obcaecati praesentium itaque! Inventore placeat cum doloribus
+        distinctio excepturi! Vitae esse modi ipsam rerum optio suscipit
+        aspernatur repellendus ipsum sunt explicabo.
+      </p>
+      <p>
+        Consequuntur corrupti, aliquam repellendus quibusdam hic provident
+        aperiam nemo molestias quasi veniam atque animi, alias natus tempora.
+        Saepe ut omnis similique odio. Fuga facere id consectetur qui aut
+        dolore! Sapiente!
+      </p>
+      <p>
+        Neque expedita dicta placeat ipsum voluptate aut repudiandae nostrum at
+        in dolorum incidunt a autem, magnam totam sequi ducimus facilis cumque
+        praesentium voluptatem doloribus! Illo est possimus atque? Nobis, unde.
+      </p>
+      <p>
+        Eius fugit explicabo sunt quas quaerat corporis mollitia sapiente magnam
+        maiores animi atque ipsam culpa rerum alias eveniet exercitationem quam
+        ipsa veritatis, est consectetur. Atque ratione architecto alias odit
+        rerum.
+      </p>
+      <p>
+        Illo exercitationem porro magni ducimus corporis accusamus sunt at
+        suscipit deleniti tenetur vero, magnam blanditiis voluptas in,
+        asperiores veritatis neque. Possimus culpa praesentium ea omnis eaque!
+        Sunt, perferendis necessitatibus. Possimus!
+      </p>
+      <p>
+        Totam excepturi sed recusandae odio rerum ab officiis officia quisquam
+        dolores omnis, culpa labore maiores voluptates assumenda! Velit ullam
+        aut rerum? Consequuntur blanditiis non harum voluptate quaerat,
+        provident corporis minus!
+      </p>
+      <p>
+        Consequuntur nam delectus dicta cum excepturi fugit fugiat quaerat
+        aperiam fuga ea asperiores blanditiis laboriosam cumque labore, maiores
+        distinctio laudantium voluptatum vitae rerum neque doloremque ipsa
+        quidem corrupti impedit. Voluptatum!
+      </p>
+      <p>
+        Dolore fugit consectetur tenetur sit similique sequi unde, maxime
+        officiis provident illo velit odio ipsa excepturi! Sequi vero omnis,
+        reiciendis repellat eligendi delectus animi iste hic quibusdam atque
+        magni beatae.
+      </p>
+      <p>
+        Cum aliquam illo maxime minima nostrum autem labore provident!
+        Aspernatur, velit sint rem nesciunt aut sapiente qui minus corporis
+        alias quod voluptatum consequuntur repellat possimus ipsa saepe aliquam
+        distinctio voluptate.
+      </p>
+      <p>
+        Et officia sapiente voluptatibus esse? Aliquam magni velit quibusdam
+        omnis, doloribus voluptates sunt, atque ut et earum, reiciendis maxime
+        cupiditate magnam? At unde quam qui eum consectetur quas voluptates
+        velit.
+      </p>
+      <p>
+        Eum, autem voluptate alias hic ipsum at, quibusdam quo nihil blanditiis
+        dolore sed ipsam quos nobis. Qui nam repudiandae autem repellat
+        molestias. Molestias, vitae? Et iure eligendi explicabo enim tempore!
+      </p>
+      <p>
+        Numquam asperiores, rerum ex molestiae facere cupiditate recusandae
+        illum non, sunt debitis iure delectus, maxime quidem totam perspiciatis
+        ullam fuga blanditiis dolores laboriosam nulla qui neque? Quis sunt
+        neque magnam.
+      </p>
+      <p>
+        Cumque velit quia similique voluptates, deleniti, ipsa hic eaque
+        reiciendis veniam molestias suscipit in, neque cum necessitatibus nulla.
+        Praesentium ducimus pariatur nesciunt tempore harum exercitationem
+        excepturi recusandae quae tempora facere.
+      </p>
+      <p>
+        Asperiores a, odio quis quas ullam culpa ratione officia corrupti
+        provident suscipit perferendis magni quisquam minus similique, maiores
+        voluptatem unde assumenda? Sequi, voluptates debitis ex blanditiis odit
+        dolore error repudiandae.
+      </p>
+      <p>
+        Unde perferendis debitis facere velit in nostrum quibusdam expedita
+        dolores dolore beatae obcaecati, a neque tenetur ipsam modi, doloribus
+        dignissimos. Quos libero, nihil est exercitationem dignissimos commodi
+        deleniti aperiam quas.
+      </p>
+      <p>
+        Autem recusandae quis enim laudantium necessitatibus, accusamus suscipit
+        tempore similique earum dicta excepturi consequuntur mollitia officia
+        repellat nostrum. Aliquam deserunt eum consectetur inventore aliquid
+        accusamus magni fugit est fugiat! Doloremque!
+      </p>
+      <p>
+        Reprehenderit harum neque similique quo unde debitis a porro, dolorum
+        corporis fugit ducimus distinctio enim blanditiis ex rem, amet quaerat
+        culpa eius vero molestiae dolor, iure sapiente dolore. Cum, suscipit!
+      </p>
+      <p>
+        Autem nam temporibus odio placeat nihil doloribus illum suscipit,
+        debitis enim! Molestias dolores accusantium, nesciunt tempora quaerat
+        ullam velit fugit eaque dignissimos harum voluptas aperiam, neque earum
+        beatae rem ipsum.
+      </p>
+    </div>
+  </body>
+</html>
