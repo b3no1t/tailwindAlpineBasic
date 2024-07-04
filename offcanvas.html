@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <title>Alpine offcanvas</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .contenu {
+        background-color: gray;
+      }
+      .offcanvas {
+        height: 100vh;
+        width: 200px;
+        background-color: red;
+        position: fixed;
+        top: 0;
+        right: 0;
+        transition: all 300ms;
+      }
+
+      .offcanvas::before {
+        content: "|||";
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        background-color: yellowgreen;
+        position: absolute;
+        top: 10px;
+        left: -30px;
+      }
+
+      .hidden {
+        right: -200px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Offcanvas navigation</h1>
+    <div x-data="{offcanvasOpen: true}">
+      <div
+        class="offcanvas"
+        x-bind:class="offcanvasOpen ? 'hidden' : ''"
+        x-on:click="offcanvasOpen = !offcanvasOpen"
+      >
+        <ul>
+          <li><a href="#">LINK</a></li>
+          <li><a href="#">LINK</a></li>
+          <li><a href="#">LINK</a></li>
+        </ul>
+      </div>
+
+      <div class="contenu">
+        <h1>Alpinejs playground</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ipsum
+          eaque debitis cumque. Assumenda possimus consequuntur autem
+          perspiciatis quia, alias voluptate praesentium magnam est corporis
+          delectus maiores quisquam reprehenderit dolores! Veniam temporibus
+          odio, quam doloremque laudantium, rem dolorum aliquid, assumenda nihil
+          quasi maxime reiciendis esse. Inventore debitis sunt nulla placeat
+          illo voluptatum, odio labore, sint aut maiores consequatur suscipit
+          cupiditate, error ea assumenda nam sequi porro? Delectus, qui quod
+          numquam perspiciatis optio quia possimus suscipit laboriosam dolores,
+          nihil minus veritatis culpa commodi fuga nisi in voluptatem quam
+          repudiandae doloremque vero error cum! Reprehenderit architecto
+          repudiandae non modi sunt. Sint veritatis necessitatibus culpa est
+          accusantium itaque repellat, quae labore neque, eligendi illum eaque
+          molestias enim voluptatum provident consequatur in earum consequuntur
+          praesentium, reprehenderit error.
+        </p>
+      </div>
+    </div>
+
+    <div x-data="{ open: false }">
+      <button @click="open = true">Expand</button>
+      <span x-show="open" x-transitio>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores
+        architecto modi, fuga nesciunt ad adipisci, cumque sed maiores itaque
+        ipsum laudantium dolorum magnam vitae nostrum dolor aperiam quasi
+        ratione illo neque mollitia rerum! Dolorum esse nam maiores aliquid
+        ratione repellendus earum nulla provident atque, error temporibus eos
+        quas nihil optio necessitatibus dignissimos non nobis cupiditate fugiat
+        enim fugit sapiente commodi facilis? Nulla hic excepturi iure nihil
+        magni. Saepe numquam animi, aut quis consequatur doloribus maiores
+        blanditiis nam aliquid eligendi voluptatibus enim. Aspernatur distinctio
+        beatae delectus dolore sint ipsa neque eaque nulla vero! Suscipit rem
+        eum ipsa delectus labore molestias dolorum nesciunt facere autem
+        asperiores, totam dolore at cupiditate. Neque accusamus corporis porro.
+        Distinctio quasi temporibus recusandae molestias, reiciendis quis
+        praesentium nam totam mollitia maxime dolorum corporis velit tempora
+        error. Repudiandae fuga iste aperiam beatae debitis facilis assumenda
+        minus rem reiciendis quisquam iusto, corporis laudantium impedit,
+        aspernatur quod sapiente ratione fugit voluptatem ipsam animi quia,
+        illum tempore error? Enim accusamus amet quasi cupiditate aspernatur ut
+        repudiandae, doloremque quidem! Architecto repellendus nesciunt
+        doloribus, iste odit natus ipsum in aliquid eaque tenetur vero
+        praesentium omnis fugit consequatur quae nulla dolore ad consectetur
+        minus? Minima nam esse saepe, fugit iure ipsam, iste dolorum enim
+        molestiae beatae error optio. Totam at tenetur assumenda consectetur
+        magni laboriosam, id perferendis tempore porro! Hic minus accusamus
+        soluta odio rerum, neque explicabo! Odio quisquam commodi molestias
+        veniam autem ab, obcaecati ea laboriosam corporis?
+      </span>
+    </div>
+    <div x-data="{ open: false }">
+      <button @click="open = ! open">Toggle</button>
+      <div x-show="open" x-transition>Hello 👋</div>
+    </div>
+  </body>
+</html>
